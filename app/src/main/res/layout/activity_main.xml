@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="410dp"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+    android:layout_gravity="start"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#303030"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_play_arrow_24"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PLAYing"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                android:textColor="#FBFBFA"
+                android:layout_marginLeft="15dp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#424141">
+
+
+            <ImageView
+                android:id="@+id/ivAlbumArt"
+                android:layout_width="127dp"
+                android:layout_height="122dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/tiffany"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.018"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.571">
+
+            </ImageView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="240dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                app:layout_constraintHorizontal_bias="0.87"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.885">
+
+                <ImageView
+                    android:id="@+id/ivRoof"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_replay_24" />
+
+                <ImageView
+                    android:id="@+id/ivPre"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_skip_previous_24" />
+
+                <ImageView
+                    android:id="@+id/ivPlay"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/play_white" />
+
+                <ImageView
+                    android:id="@+id/ivNext"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_skip_next_24" />
+
+                <ImageView
+                    android:id="@+id/ivFavorite"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_favorite_border_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="241dp"
+                android:layout_height="59dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/ivAlbumArt"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.175">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="240dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:text="Title"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvArtist"
+                    android:layout_width="240dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="singer"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:outlineAmbientShadowColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.614" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="플레이리스트"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/searchLayout">
+
+            <EditText
+                android:id="@+id/edt_Search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="곡명 / 가수명 입력"
+                android:background="@color/dark_green"
+                android:textColorHint="#80FF9800"
+                android:layout_weight="1"
+                android:textColor="@color/orange"
+                android:visibility="invisible"
+                android:textSize="20sp"/>
+
+            <ImageButton
+                android:id="@+id/ibSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@color/dark_green"
+                android:visibility="invisible"
+                android:src="@drawable/ic_baseline_search_24"/>
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fl_Recycler"
+            android:layout_width="match_parent"
+            android:layout_height="456dp"
+            android:layout_weight="3">
+
+        </FrameLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomMenu"
+            app:menu="@menu/bottom_menu"
+            app:itemTextColor="@color/white"
+            app:itemIconTint="@color/white"
+            app:itemRippleColor="@color/bottom_color"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <include layout="@layout/right_menu"></include>
+
+</androidx.drawerlayout.widget.DrawerLayout>
